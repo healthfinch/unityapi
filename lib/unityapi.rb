@@ -1,5 +1,4 @@
 module Unityapi
-  
+  require 'unityapi/unity_client'
 end
 
-require 'unityapi/unity_client'

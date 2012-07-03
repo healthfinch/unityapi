@@ -61,32 +61,6 @@ module Unityapi
       end
       return response
     end
-    
-    # def method_missing(name, *args, &block)
-    #   if name.to_s =~ /^get_(.+)$/
-    #     run_get_methods($1, *args, &block)
-    #   else
-    #     super
-    #   end
-    # end
-    # 
-    # def respond_to?(meth)
-    #   if meth.to_s =~ /^get_(.+)$/
-    #     true
-    #   else
-    #     super
-    #   end
-    # end
-    # 
-    # # def run_get_methods(attrs, *args, &block)  
-    # #   cameled = attrs.to_s.sub(/^[a-z\d]*/) { inflections.acronyms[$&] || $&.capitalize }
-    # #   cameled.gsub(/(?:_|(\/))([a-z\d]*)/i) { "#{$1}#{inflections.acronyms[$2] || $2.capitalize}" }.gsub('/', '::')
-    # #   
-    # #   symname = attrs.clone.delete("_")
-    # #   puts "running method missing for Get#{attrs.camelize} with symname #{symname}"
-    # #   response = magic_action("Get#{attrs.camelize}", self.security_token, self.user, self.app, *args)
-    # #   return response.body[:magic_response][:magic_result][:diffgram]["#{symname}response".to_sym]["#{symname}info".to_sym]
-    # # end
 
     def commit_charges(encounter_id, side_de)
     end
@@ -343,189 +317,215 @@ module Unityapi
     end
     
     def save_admin_task
-    response = magic_action("SaveAdminTask", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveadmintaskresponse][:saveadmintaskinfo]
+      response = magic_action("SaveAdminTask", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveadmintaskresponse][:saveadmintaskinfo]
     end
 
     def save_allergy
-    response = magic_action("SaveAllergy", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveallergyresponse][:saveallergyinfo]
+      response = magic_action("SaveAllergy", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveallergyresponse][:saveallergyinfo]
     end
 
     def save_ced
-    response = magic_action("SaveCED", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savecedresponse][:savecedinfo]
+      response = magic_action("SaveCED", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savecedresponse][:savecedinfo]
     end
 
     def save_charge
-    response = magic_action("SaveCharge", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savechargeresponse][:savechargeinfo]
+      response = magic_action("SaveCharge", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savechargeresponse][:savechargeinfo]
     end
 
     def save_chart_view_audit
-    response = magic_action("SaveChartViewAudit", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savechartviewauditresponse][:savechartviewauditinfo]
+      response = magic_action("SaveChartViewAudit", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savechartviewauditresponse][:savechartviewauditinfo]
     end
 
     def save_diagnosis
-    response = magic_action("SaveDiagnosis", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savediagnosisresponse][:savediagnosisinfo]
+      response = magic_action("SaveDiagnosis", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savediagnosisresponse][:savediagnosisinfo]
     end
 
     def save_document_image
-    response = magic_action("SaveDocumentImage", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savedocumentimageresponse][:savedocumentimageinfo]
+      response = magic_action("SaveDocumentImage", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savedocumentimageresponse][:savedocumentimageinfo]
     end
 
     def save_er_note
-    response = magic_action("SaveERNote", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveernoteresponse][:saveernoteinfo]
+      response = magic_action("SaveERNote", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveernoteresponse][:saveernoteinfo]
     end
 
     def save_hie_document
-    response = magic_action("SaveHIEDocument", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savehiedocumentresponse][:savehiedocumentinfo]
+      response = magic_action("SaveHIEDocument", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savehiedocumentresponse][:savehiedocumentinfo]
     end
 
     def save_history
-    response = magic_action("SaveHistory", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savehistoryresponse][:savehistoryinfo]
+      response = magic_action("SaveHistory", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savehistoryresponse][:savehistoryinfo]
     end
 
     def save_immunization
-    response = magic_action("SaveImmunization", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveimmunizationresponse][:saveimmunizationinfo]
+      response = magic_action("SaveImmunization", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveimmunizationresponse][:saveimmunizationinfo]
     end
 
     def save_note
-    response = magic_action("SaveNote", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savenoteresponse][:savenoteinfo]
+      response = magic_action("SaveNote", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savenoteresponse][:savenoteinfo]
     end
 
     def save_patient
-    response = magic_action("SavePatient", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savepatientresponse][:savepatientinfo]
+      response = magic_action("SavePatient", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savepatientresponse][:savepatientinfo]
     end
 
-    def save_patientLocation
-    response = magic_action("SavePatientLocation", self.security_token, self.user, self.app	 )
-    return response.body[:magic_response][:magic_result][:diffgram][:savepatientlocationresponse][:savepatientlocationinfo]
+    def save_patient_location
+      response = magic_action("SavePatientLocation", self.security_token, self.user, self.app	 )
+      return response.body[:magic_response][:magic_result][:diffgram][:savepatientlocationresponse][:savepatientlocationinfo]
     end
 
     def save_problem
-    response = magic_action("SaveProblem", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveproblemresponse][:saveprobleminfo]
+      response = magic_action("SaveProblem", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveproblemresponse][:saveprobleminfo]
     end
 
     def save_problems_data
-    response = magic_action("SaveProblemsData", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveproblemsdataresponse][:saveproblemsdatainfo]
+      response = magic_action("SaveProblemsData", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveproblemsdataresponse][:saveproblemsdatainfo]
     end
 
     def save_ref_provider
-    response = magic_action("SaveRefProvider", self.security_token, self.user, self.app	 )
-    return response.body[:magic_response][:magic_result][:diffgram][:saverefproviderresponse][:saverefproviderinfo]
+      response = magic_action("SaveRefProvider", self.security_token, self.user, self.app	 )
+      return response.body[:magic_response][:magic_result][:diffgram][:saverefproviderresponse][:saverefproviderinfo]
     end
 
     def save_result
-    response = magic_action("SaveResult", self.security_token, self.user, self.app	 )
-    return response.body[:magic_response][:magic_result][:diffgram][:saveresultresponse][:saveresultinfo]
+      response = magic_action("SaveResult", self.security_token, self.user, self.app	 )
+      return response.body[:magic_response][:magic_result][:diffgram][:saveresultresponse][:saveresultinfo]
     end
 
     def save_rx
-    response = magic_action("SaveRX", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saverxresponse][:saverxinfo]
+      response = magic_action("SaveRX", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saverxresponse][:saverxinfo]
     end
 
     def save_simple_encounter
-    response = magic_action("SaveSimpleEncounter", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savesimpleencounterresponse][:savesimpleencounterinfo]
+      response = magic_action("SaveSimpleEncounter", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savesimpleencounterresponse][:savesimpleencounterinfo]
     end
 
     def save_simple_rx
-    response = magic_action("SaveSimpleRX", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savesimplerxresponse][:savesimplerxinfo]
+      response = magic_action("SaveSimpleRX", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savesimplerxresponse][:savesimplerxinfo]
     end
 
     def save_specialist
-    response = magic_action("SaveSpecialist", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savespecialistresponse][:savespecialistinfo]
+      response = magic_action("SaveSpecialist", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savespecialistresponse][:savespecialistinfo]
     end
 
     def save_task
-    response = magic_action("SaveTask", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savetaskresponse][:savetaskinfo]
+      response = magic_action("SaveTask", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savetaskresponse][:savetaskinfo]
     end
 
     def save_task_status
-    response = magic_action("SaveTaskStatus", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savetaskstatusresponse][:savetaskstatusinfo]
+      response = magic_action("SaveTaskStatus", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savetaskstatusresponse][:savetaskstatusinfo]
     end
 
     def save_unstructured_document
-    response = magic_action("SaveUnstructuredDocument", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:saveunstructureddocumentresponse][:saveunstructureddocumentinfo]
+      response = magic_action("SaveUnstructuredDocument", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:saveunstructureddocumentresponse][:saveunstructureddocumentinfo]
     end
 
     def save_v10_doc_signature
-    response = magic_action("SaveV10DocSignature", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savev10docsignatureresponse][:saveV10docsignatureinfo]
+      response = magic_action("SaveV10DocSignature", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savev10docsignatureresponse][:saveV10docsignatureinfo]
     end
 
     def save_v11_note
-    response = magic_action("SaveV11Note", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savev11noteresponse][:savev11noteinfo]
+      response = magic_action("SaveV11Note", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savev11noteresponse][:savev11noteinfo]
     end
 
     def save_vitals
-    response = magic_action("SaveVitals", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:savevitalsresponse][:savevitalsinfo]
+      response = magic_action("SaveVitals", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:savevitalsresponse][:savevitalsinfo]
     end
 
     def search_charge_codes
-    response = magic_action("SearchChargeCodes", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchchargecodesresponse][:searchchargecodesinfo]
+      response = magic_action("SearchChargeCodes", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchchargecodesresponse][:searchchargecodesinfo]
     end
 
     def search_diagnosis_codes
-    response = magic_action("SearchDiagnosisCodes", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchdiagnosiscodesresponse][:searchdiagnosiscodesinfo]
+      response = magic_action("SearchDiagnosisCodes", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchdiagnosiscodesresponse][:searchdiagnosiscodesinfo]
     end
 
     def search_meds
-    response = magic_action("SearchMeds", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchmedsresponse][:searchmedsinfo]
+      response = magic_action("SearchMeds", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchmedsresponse][:searchmedsinfo]
     end
 
     def search_patients
-    response = magic_action("SearchPatients", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchpatientsresponse][:searchpatientsinfo]
+      response = magic_action("SearchPatients", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchpatientsresponse][:searchpatientsinfo]
     end
 
     def search_patients_rxhub5
-    response = magic_action("SearchPatientsRXHub5", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchpatientsrxhub5response][:searchpatientsrxhub5info]
+      response = magic_action("SearchPatientsRXHub5", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchpatientsrxhub5response][:searchpatientsrxhub5info]
     end
 
     def search_pharmacies
-    response = magic_action("SearchPharmacies", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchpharmaciesresponse][:searchpharmaciesinfo]
+      response = magic_action("SearchPharmacies", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchpharmaciesresponse][:searchpharmaciesinfo]
     end
 
     def search_problem_codes
-    response = magic_action("SearchProblemCodes", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:searchproblemcodesresponse][:searchproblemcodesinfo]
+      response = magic_action("SearchProblemCodes", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:searchproblemcodesresponse][:searchproblemcodesinfo]
     end
 
     def update_encounter
-    response = magic_action("UpdateEncounter", self.security_token, self.user, self.app)
-    return response.body[:magic_response][:magic_result][:diffgram][:updateencounterresponse][:updateencounterinfo]
+      response = magic_action("UpdateEncounter", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:updateencounterresponse][:updateencounterinfo]
     end
 
     def update_referral_order_status
-    response = magic_action("UpdateReferralOrderStatus", self.security_token, self.user, self.app	 )
-    return response.body[:magic_response][:magic_result][:diffgram][:updatereferralorderstatusresponse][:updatereferralorderstatusinfo]
+      response = magic_action("UpdateReferralOrderStatus", self.security_token, self.user, self.app	 )
+      return response.body[:magic_response][:magic_result][:diffgram][:updatereferralorderstatusresponse][:updatereferralorderstatusinfo]
     end
+    
+    # def method_missing(name, *args, &block)
+    #   if name.to_s =~ /^get_(.+)$/
+    #     run_get_methods($1, *args, &block)
+    #   else
+    #     super
+    #   end
+    # end
+    # 
+    # def respond_to?(meth)
+    #   if meth.to_s =~ /^get_(.+)$/
+    #     true
+    #   else
+    #     super
+    #   end
+    # end
+    # 
+    # # def run_get_methods(attrs, *args, &block)  
+    # #   cameled = attrs.to_s.sub(/^[a-z\d]*/) { inflections.acronyms[$&] || $&.capitalize }
+    # #   cameled.gsub(/(?:_|(\/))([a-z\d]*)/i) { "#{$1}#{inflections.acronyms[$2] || $2.capitalize}" }.gsub('/', '::')
+    # #   
+    # #   symname = attrs.clone.delete("_")
+    # #   puts "running method missing for Get#{attrs.camelize} with symname #{symname}"
+    # #   response = magic_action("Get#{attrs.camelize}", self.security_token, self.user, self.app, *args)
+    # #   return response.body[:magic_response][:magic_result][:diffgram]["#{symname}response".to_sym]["#{symname}info".to_sym]
+    # # end
     
   end
 end

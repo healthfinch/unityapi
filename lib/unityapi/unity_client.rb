@@ -133,137 +133,208 @@ module Unityapi
       
     def get_doc_template
       response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram][:getdoctemplateresponse]
+      return response.body[:magic_response][:magic_result][:diffgram][:getdoctemplateresponse][:getdoctemplateinfo]
     end
       
     def get_document_by_accession
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram][:getdocumentbyaccension]
+      response = magic_action("GetDocumentByAccession", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getdocumentbyaccensionresponse][:getdocumentbyaccensioninfo]
     end
       
     def get_document_image
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetDocumentImage", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getdocumentimageresponse][:getdocumentimageinfo]
     end
       
     def get_documents
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetDocuments", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getdocumentsresponse][:getdocumentsinfo]
     end
       
     def get_document_type
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetDocumentType", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getdocumenttyperesponse][:getdocumenttypeinfo]
     end
       
     def get_dur
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetDUR", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getdurresponse][:getdurinfo]
     end
       
     def get_encounter
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetEncounter", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getencounterresponse][:getencounterinfo]
     end
       
     def get_encounter_date
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetEncounterDate", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getencounterdateresponse][:getencounterdateinfo]
     end
       
     def get_encounter_list
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetEncounterList", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getencounterlistresponse][:getencounterlistinfo]
     end
       
     def get_hie_document
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetHIEDocument", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:gethiedocumentresponse][:gethiedocumentinfo]
     end
       
     def get_last_patient
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetLastPatient", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getlastpatientresponse][:getlastpatientinfo]
     end
       
     def get_list_of_dictionaries
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetListOfDictionaries", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getlistofdictionariesresponse][:getlistofdictionariesinfo]
     end
       
     def get_order_history
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetOrderHistory", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getorderhistoryresponse][:getorderhistoryinfo]
     end
       
     def get_organization_id
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetOrganizationID", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getorganizationidresponse][:getorganizationidinfo]
     end
       
     def get_packages
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPackages", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpackagesresponse][:getpackagesinfo]
     end
       
     def get_patient
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatient", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientresponse][:getpatientinfo]
     end
-      
+    def get_patient_by_mrn
+      response = magic_action("GetPatientByMRN", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientbymrnresponse][:getpatientbymrninfo]
+    end
     def get_patient_cda
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientCDA", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientcdaresponse][:getpatientcdainfo]
     end
       
     def get_patient_diagnosis
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientDiagnosis", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientdiagnosisresponse][:getpatientdiagnosisinfo]
     end
       
     def get_patient_full
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientFull", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientfullresponse][:getpatientfullinfo]
     end
       
     def get_patient_ids
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientIDs", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientidsresponse][:getpatientidsinfo]
     end
       
     def get_patient_list
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientList", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientlistresponse][:getpatientlistinfo]
     end
       
     def get_patient_locations
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientLocations", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientlocationsresponse][:getpatientlocationsinfo]
+    end
+    def get_patient_pharmacies
+      response = magic_action("GetPatientPharmacies", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientpharmaciesresponse][:getpatientpharmaciesinfo]
     end
       
     def get_patient_problems
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientProblems", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientproblemsresponse][:getpatientproblemsinfo]
     end
       
     def get_patients_by_icd9
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientsByICD9", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientsbyicd9response][:getpatientsbyicd9info]
     end
       
     def get_patient_sections
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetPatientSections", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getpatientsectionsresponse][:getpatientsectionsinfo]
     end
       
     def get_provider
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetProvider", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getproviderresponse][:getproviderinfo]
     end
       
     def get_providers
-      response = magic_action("GetAccount", self.security_token, self.user, self.app)
-      return response.body[:magic_response][:magic_result][:diffgram]
+      response = magic_action("GetProviders", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getprovidersresponse][:getprovidersinfo]
+    end
+    def get_ref_providers_by_specialty
+      response = magic_action("GetRefProvidersBySpecialty", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getrefprovidersbyspecialtyresponse][:getrefprovidersbyspecialtyinfo]
+    end
+    def get_rounding_list_entries
+      response = magic_action("GetRoundingListEntries", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getroundinglistentriesresponse][:getroundinglistentriesinfo]
+    end
+    def get_rounding_lists
+      response = magic_action("GetRoundingLists", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getroundinglistsresponse][:getroundinglistsinfo]
+    end
+    def get_rx_favs
+      response = magic_action("GetRXFavs", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getrxfavsresponse][:getrxfavsinfo]
+    end
+    def get_schedule
+      response = magic_action("GetSchedule", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:scheduleresponse][:scheduleinfo]
+    end
+    def get_server_info
+      response = magic_action("GetServerInfo", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getserverinforesponse][:getserverinfoinfo]
+    end
+    def get_sigs
+      response = magic_action("GetSigs", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getsigsresponse][:getsigsinfo]
+    end
+    def get_site_config
+      response = magic_action("GetSiteConfig", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getsiteconfigresponse][:getsiteconfiginfo]
+    end
+    def get_task
+      response = magic_action("GetTask", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:gettaskresponse][:gettaskinfo]
+    end
+    def get_task_list
+      response = magic_action("GetTaskList", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:gettasklistresponse][:gettasklistinfo]
+    end
+    def get_token_validation
+      response = magic_action("GetTokenValidation", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:gettokenvalidationresponse][:gettokenvalidationinfo]
+    end
+    def get_user_authentication
+      response = magic_action("GetUserAuthentication", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getuserauthenticationresponse][:getuserauthenticationinfo]
+    end
+    def get_user_id
+      response = magic_action("GetUserID", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getuseridresponse][:getuseridinfo]
+    end
+    def get_user_security
+      response = magic_action("GetUserSecurity", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getusersecurityresponse][:getusersecurityinfo]
+    end
+    def get_vaccine_manufacturers
+      response = magic_action("GetVaccineManufacturers", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getvaccinemanufacturersresponse][:getvaccinemanufacturersinfo]
+    end
+    def get_vitals
+      response = magic_action("GetVitals", self.security_token, self.user, self.app)
+      return response.body[:magic_response][:magic_result][:diffgram][:getvitalsresponse][:getvitalsinfo]
     end
   end
 end

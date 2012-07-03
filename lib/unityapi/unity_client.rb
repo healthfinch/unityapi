@@ -337,7 +337,6 @@ module Unityapi
       return response.body[:magic_response][:magic_result][:diffgram][:getvitalsresponse][:getvitalsinfo]
     end
     
-    
     def make_task(task_type, target_user, work_object_id)
       response = magic_action("MakeTask", self.security_token, self.user, self.app, task_type, target_user, work_object_id)
       return response.body[:magic_response][:magic_result][:diffgram][:maketaskresponse][:maketaskinfo]

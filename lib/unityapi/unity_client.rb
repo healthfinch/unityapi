@@ -122,7 +122,7 @@ module Unityapi
       return response.body[:magic_response][:magic_result][:diffgram][:getdocumentimageresponse][:getdocumentimageinfo]
     end
       
-    def get_documents(patient_id, start_date=nil, end_date=nil, document_id, document_type=nil)
+    def get_documents(patient_id, document_id, document_type=nil, start_date=nil, end_date=nil)
       response = magic_action("GetDocuments", patient_id, start_date, end_date, document_id, document_type)
       return response.body[:magic_response][:magic_result][:diffgram][:getdocumentsresponse][:getdocumentsinfo]
     end

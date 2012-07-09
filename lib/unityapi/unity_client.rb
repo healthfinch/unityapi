@@ -37,8 +37,8 @@ module Unityapi
           http.headers = {"Accept-Encoding" => "gzip, deflate", "SOAPAction" => "http://www.allscripts.com/Unity/IUnityService/Magic", "Content-Type" =>  "text/xml; charset=UTF-8"}
           soap.body = {
             "Action" => action,
-            "Appname" => self.app,
             "UserID" => user_id,
+            "Appname" => self.app,
             "PatientID" => patient_id,
             "Token" => self.security_token,
             "Parameter1" => param_1,
@@ -167,7 +167,12 @@ module Unityapi
       response = magic_action("GetListOfDictionaries")
       return response.body[:magic_response][:magic_result][:diffgram][:getlistofdictionariesresponse][:getlistofdictionariesinfo]
     end
-      
+    
+    def get_medication_by_trans_id(user_id, patient_id, trans_id)
+      response = magic_action("GetMedicationByTransID", user_id, patient_id, trans_id)
+      return response.body[:magic_response][:magic_result][:diffgram][:getmedicationbytransidresponse][:getmedicationbytransidinfo]      
+    end
+    
     def get_order_history(user_id, item_id)
       response = magic_action("GetOrderHistory", user_id, nil, item_id)
       return response.body[:magic_response][:magic_result][:diffgram][:getorderhistoryresponse][:getorderhistoryinfo]

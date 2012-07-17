@@ -15,3 +15,12 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+.idea/.name
+.idea/.rakeTasks
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/unityapi.iml
+.idea/vcs.xml
+.idea/workspace.xml

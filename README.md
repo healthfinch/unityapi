@@ -53,3 +53,11 @@ unityapi
 ========
 
 Ruby wrapper for Allscripts Unity API 
+
+Maintainer
+
+    Ash Gupta (https://github.com/incomethax)
+
+License
+
+MIT License. Copyright 2012 healthfinch, Inc. http://www.healthfinch.com

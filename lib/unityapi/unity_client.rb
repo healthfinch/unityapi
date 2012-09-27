@@ -197,7 +197,7 @@ module Unityapi
     def get_patient_activity(user_id, patient_id)
        response = magic_action("GetPatientActivity", user_id, patient_id)
        rootobj = response.body[:magic_response][:magic_result][:diffgram][:getpatientactivityresponse]
-       return {:encounters => rootobj[:getpatientactivityinfo], :problems => rootobj[:getpatientactivityinfo2], :vitals => rootobj[:getpatientactivityinfo3], :results => rootobj[:getpatientactivityinfo4],:something =>  rootobj[:getpatientactivityinfo5],:somethingelse => rootobj[:getpatientactivityinfo6]}
+       return {:encounters => rootobj[:getpatientactivityinfo], :problems => rootobj[:getpatientactivityinfo2], :vitals => rootobj[:getpatientactivityinfo3], :results => rootobj[:getpatientactivityinfo4],:orders =>  rootobj[:getpatientactivityinfo5],:procedures => rootobj[:getpatientactivityinfo6]]}
     end
     
     def get_patient_by_mrn(user_id, mrn)

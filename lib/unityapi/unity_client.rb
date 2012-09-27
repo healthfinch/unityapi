@@ -30,7 +30,8 @@ module Unityapi
       end
       return response.body[:get_security_token_response][:get_security_token_result]
     end
-  
+    
+    #basic magic action call for UnityAPI; all other actions use this call to execute the SOAP transaction
     def magic_action(action, user_id=self.user, patient_id = "", param_1=nil, param_2=nil, param_3=nil, param_4=nil, param_5=nil, param_6=nil, data=nil)
       begin
         response = self.client.request("Magic", xmlns: "http://www.allscripts.com/Unity") do
@@ -188,10 +189,17 @@ module Unityapi
       return response.body[:magic_response][:magic_result][:diffgram][:getpackagesresponse][:getpackagesinfo]
     end
       
-    def get_patient(user_id, patient_id, include_pic)
+    def get_patient(user_id, patient_id, include_pic=nil)
       response = magic_action("GetPatient", user_id, patient_id, include_pic)
       return response.body[:magic_response][:magic_result][:diffgram][:getpatientresponse][:getpatientinfo]
     end
+    
+    def get_patient_activity(user_id, patient_id)
+       response = magic_action("GetPatientActivity", user_id, patient_id)
+       rootobj = response.body[:magic_response][:magic_result][:diffgram][:getpatientactivityresponse]
+       return {:encounters => rootobj[:getpatientactivityinfo], :problems => rootobj[:getpatientactivityinfo2], :vitals => rootobj[:getpatientactivityinfo3], :results => rootobj[:getpatientactivityinfo4],:something =>  rootobj[:getpatientactivityinfo5],:somethingelse => rootobj[:getpatientactivityinfo6]}
+    end
+    
     def get_patient_by_mrn(user_id, mrn)
       response = magic_action("GetPatientByMRN", user_id, nil, mrn)
       return response.body[:magic_response][:magic_result][:diffgram][:getpatientbymrnresponse][:getpatientbymrninfo]

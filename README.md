@@ -48,16 +48,10 @@ For a full list of supported calls please browse the source found in lib/unityap
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-=======
-unityapi
-========
 
-Ruby wrapper for Allscripts Unity API 
+## Additional Information
 
-Maintainer
+Maintainer(s):  Ash Gupta (https://github.com/incomethax)
 
-Ash Gupta (https://github.com/incomethax)
-
-License
-
+License:
 MIT License. Copyright 2012 healthfinch, Inc. http://www.healthfinch.com

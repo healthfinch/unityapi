@@ -1,8 +1,8 @@
 module Unityapi
   class UnityClient 
     require 'savon'
-    attr_accessor :client, :security_token, :user, :pass, :app
-    def initialize(user, pass, app, path_to_wsdl)
+    attr_accessor :client, :security_token, :user, :pass, :app, :proxy
+    def initialize(user, pass, app, path_to_wsdl, proxy = nil)
       @user = user
       @pass = pass
       @app = app
@@ -12,7 +12,12 @@ module Unityapi
         config.pretty_print_xml = true
         HTTPI.log = false
       end
-      @client = Savon.client(path_to_wsdl)
+      @client = Savon.client do |wsdl, http|
+        wsdl.document = path_to_wsdl
+        if proxy
+          http.proxy = proxy
+        end
+      end
       @security_token = get_security_token(user, pass)
     end
   

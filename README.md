@@ -21,7 +21,11 @@ Or install it yourself as:
 1.) Initialize the Unity Client
 
     client = Unityapi::UnityClient.new(unity_username, unity_password, appname, unity_server_url)
-	
+
+If using a proxy server:
+    
+    client = Unityapi::UnityClient.new(unity_username, unity_password, appname, unity_server_url, proxy_server_url)
+    
 2.) Make calls with the client
 
     unity_response = client.magic_action(action_name, provider_username, patient_id, param_1, param_2, param_3, param_4, param_5, param_6)

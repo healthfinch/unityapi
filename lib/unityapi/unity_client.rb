@@ -261,7 +261,7 @@ module Unityapi
     end
       
     def get_provider(provider_id, user_name)
-      response = magic_action("GetProvider")
+      response = magic_action("GetProvider", self.user, nil, provider_id, user_name)
       return response.body[:magic_response][:magic_result][:diffgram][:getproviderresponse][:getproviderinfo]
     end
       
